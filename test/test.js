@@ -7,7 +7,8 @@ import { multiple3and5,
   recFibonacciSequenceSumEvenValue,
   PLusGrandFacteurPremier,
   PLusGrandFacteurPremierBis,
-  PlusGrandPalindrome } from '../Probleme.js';
+  PlusGrandPalindrome,
+  PlusPetitNombreDivisible } from '../Probleme.js';
 import * as assert from 'assert';
 import { expect } from 'chai';
 
@@ -58,5 +59,14 @@ describe('le plus grand palindrome', function () {
   })
   it ('Le plus grand palindrome de produit de 3 digit est de 9009', function (){
     expect(PlusGrandPalindrome(3)).to.be.equal(906609)
+  })
+})
+
+describe('le plus petit nombre divisible par un intervalle', function () {
+  it ('Le plus nombre divisible par les nombres de 1 à 10', function (){
+    expect(PlusPetitNombreDivisible(1,10)).to.be.equal(2520)
+  })
+  it ('Le plus nombre divisible par les nombres de 1 à 20', function (){
+    expect(PlusPetitNombreDivisible(1,20)).to.be.equal(2520)
   })
 })

@@ -159,6 +159,27 @@ function PlusGrandPalindrome(nombreDeDigit) {
     }
   }
 }
+
+function PlusPetitNombreDivisible(departIntervalle, finIntervalle){
+  let EstLePlusPetitNombreDivisble = false
+  let nombreATrouver = 0;
+  do{
+    nombreATrouver = nombreATrouver +1
+    for (let i=departIntervalle; i<finIntervalle+1;i++){
+      if(nombreATrouver%i == 0)
+        EstLePlusPetitNombreDivisble = true;
+      else{
+        EstLePlusPetitNombreDivisble = false;
+        break;
+      }
+    }
+    if (EstLePlusPetitNombreDivisble )
+    return nombreATrouver;
+
+  }while(
+    EstLePlusPetitNombreDivisble == false
+  );
+}
 export {
   multiple3and5,
   FibonacciSequenceSumEvenValue,
@@ -170,4 +191,5 @@ export {
   PLusGrandFacteurPremier,
   PLusGrandFacteurPremierBis,
   PlusGrandPalindrome,
+  PlusPetitNombreDivisible,
 };
