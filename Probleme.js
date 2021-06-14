@@ -164,7 +164,7 @@ function PlusPetitNombreDivisible(departIntervalle, finIntervalle){
   let EstLePlusPetitNombreDivisble = false
   let nombreATrouver = 0;
   do{
-    nombreATrouver = nombreATrouver +1
+    nombreATrouver = nombreATrouver +2
     for (let i=departIntervalle; i<finIntervalle+1;i++){
       if(nombreATrouver%i == 0)
         EstLePlusPetitNombreDivisble = true;

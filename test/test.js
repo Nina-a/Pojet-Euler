@@ -63,10 +63,11 @@ describe('le plus grand palindrome', function () {
 })
 
 describe('le plus petit nombre divisible par un intervalle', function () {
+  this.timeout(20000);
   it ('Le plus nombre divisible par les nombres de 1 à 10', function (){
     expect(PlusPetitNombreDivisible(1,10)).to.be.equal(2520)
   })
   it ('Le plus nombre divisible par les nombres de 1 à 20', function (){
-    expect(PlusPetitNombreDivisible(1,20)).to.be.equal(2520)
+    expect(PlusPetitNombreDivisible(1,20)).to.be.equal(232792560)
   })
 })
