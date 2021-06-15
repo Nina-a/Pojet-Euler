@@ -180,6 +180,19 @@ function PlusPetitNombreDivisible(departIntervalle, finIntervalle){
     EstLePlusPetitNombreDivisble == false
   );
 }
+
+function SumSquareDifference(departIntervalle, finIntervalle){
+  let sommeDesCarres = 0;
+  let carreDesSommes = 0;
+
+  for (let i = departIntervalle; i <= finIntervalle; i++){
+    sommeDesCarres = sommeDesCarres + i*i;
+  }
+  carreDesSommes = ((departIntervalle + finIntervalle)*(finIntervalle/2))*((departIntervalle + finIntervalle)*(finIntervalle/2));
+  console.log(carreDesSommes-sommeDesCarres);
+  return (carreDesSommes-sommeDesCarres)
+
+}
 export {
   multiple3and5,
   FibonacciSequenceSumEvenValue,
@@ -192,4 +205,5 @@ export {
   PLusGrandFacteurPremierBis,
   PlusGrandPalindrome,
   PlusPetitNombreDivisible,
+  SumSquareDifference
 };

@@ -8,7 +8,8 @@ import { multiple3and5,
   PLusGrandFacteurPremier,
   PLusGrandFacteurPremierBis,
   PlusGrandPalindrome,
-  PlusPetitNombreDivisible } from '../Probleme.js';
+  PlusPetitNombreDivisible,
+  SumSquareDifference } from '../Probleme.js';
 import * as assert from 'assert';
 import { expect } from 'chai';
 
@@ -69,5 +70,14 @@ describe('le plus petit nombre divisible par un intervalle', function () {
   })
   it ('Le plus nombre divisible par les nombres de 1 à 20', function (){
     expect(PlusPetitNombreDivisible(1,20)).to.be.equal(232792560)
+  })
+})
+
+describe('Sum square difference', function() {
+  it('sum square difference between 1 to 10',  function(){
+    expect(SumSquareDifference(1,10)).to.be.equal(2640)
+  })
+  it('sum square difference between 1 to 100',  function(){
+    expect(SumSquareDifference(1,100)).to.be.equal(25164150)
   })
 })
