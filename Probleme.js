@@ -193,6 +193,31 @@ function SumSquareDifference(departIntervalle, finIntervalle){
   return (carreDesSommes-sommeDesCarres)
 
 }
+
+function nthPrime(nombreAAtteindre){
+  let arrayPrime = [2];
+  let i = 2;
+  let pasPremier = false;
+  let permier = false;
+  let result = 0;
+  while (arrayPrime.length !== nombreAAtteindre){
+    for (let j = 2; j < i; j++) {
+      if (i % j == 0) {
+        pasPremier = true;
+      } else {
+        permier = true;
+      }
+    }
+    if (pasPremier == false && permier == true) {
+      arrayPrime.push(i);
+    }
+    i++;
+    pasPremier = false;
+    permier = false;
+  }
+  result = arrayPrime[nombreAAtteindre-1]
+  return result;
+}
 export {
   multiple3and5,
   FibonacciSequenceSumEvenValue,
@@ -205,5 +230,6 @@ export {
   PLusGrandFacteurPremierBis,
   PlusGrandPalindrome,
   PlusPetitNombreDivisible,
-  SumSquareDifference
+  SumSquareDifference,
+  nthPrime
 };

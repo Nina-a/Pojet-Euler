@@ -9,7 +9,8 @@ import { multiple3and5,
   PLusGrandFacteurPremierBis,
   PlusGrandPalindrome,
   PlusPetitNombreDivisible,
-  SumSquareDifference } from '../Probleme.js';
+  SumSquareDifference,
+  nthPrime } from '../Probleme.js';
 import * as assert from 'assert';
 import { expect } from 'chai';
 
@@ -79,5 +80,14 @@ describe('Sum square difference', function() {
   })
   it('sum square difference between 1 to 100',  function(){
     expect(SumSquareDifference(1,100)).to.be.equal(25164150)
+  })
+})
+
+describe('le nième premier', function() {
+  it('le sixième nombre premier est 13',  function(){
+    expect(nthPrime(6)).to.be.equal(13)
+  })
+  it('le dix mille et unième nombre premier',  function(){
+    expect(nthPrime(10001)).to.be.equal(104743)
   })
 })
