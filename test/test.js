@@ -10,7 +10,9 @@ import { multiple3and5,
   PlusGrandPalindrome,
   PlusPetitNombreDivisible,
   SumSquareDifference,
-  nthPrime } from '../Probleme.js';
+  nthPrime,
+  biggestProductOfDigit } from '../Probleme.js';
+  
 import * as assert from 'assert';
 import { expect } from 'chai';
 
@@ -84,10 +86,20 @@ describe('Sum square difference', function() {
 })
 
 describe('le nième premier', function() {
+  this.timeout(40000);
   it('le sixième nombre premier est 13',  function(){
     expect(nthPrime(6)).to.be.equal(13)
   })
   it('le dix mille et unième nombre premier',  function(){
     expect(nthPrime(10001)).to.be.equal(104743)
+  })
+})
+
+describe('Le plus grand produit d\'un nombre de digit donné' ,function(){
+  it('le produit le plus grand avec 4 digit successifs', function(){
+    expect(biggestProductOfDigit(4)).to.be.equal(5832)
+  })
+  it('le produit le plus grand avec 13 digit successifs', function(){
+    expect(biggestProductOfDigit(13)).to.be.equal(23514624000)
   })
 })
