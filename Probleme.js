@@ -232,6 +232,25 @@ function biggestProductOfDigit(NombreDeDigit){
   }
   return greatestProduct;
 }
+
+function specialPythagoreanTriplet(sommeDuTriplet){
+  let sommeAComparer = 0;
+  let sommeAuCarre = 0;
+  for ( let a = 1; a < sommeDuTriplet ; a++ ){
+    for ( let b = a+1 ; b < sommeDuTriplet ; b ++){
+      for ( let c= a+2 ; c <sommeDuTriplet; c ++ ){
+      let aa = a*a;
+      let bb = b*b;
+      let cc = c*c;
+      sommeAComparer = a + b + c;
+      sommeAuCarre = aa + bb;
+      if (sommeAuCarre == cc && sommeAComparer == sommeDuTriplet  ){
+        return (a*b*c)
+      }
+      }
+    }
+  }
+}
 export {
   multiple3and5,
   FibonacciSequenceSumEvenValue,
@@ -246,5 +265,6 @@ export {
   PlusPetitNombreDivisible,
   SumSquareDifference,
   nthPrime,
-  biggestProductOfDigit
+  biggestProductOfDigit,
+  specialPythagoreanTriplet
 };

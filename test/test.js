@@ -11,7 +11,9 @@ import { multiple3and5,
   PlusPetitNombreDivisible,
   SumSquareDifference,
   nthPrime,
-  biggestProductOfDigit } from '../Probleme.js';
+  biggestProductOfDigit,
+  specialPythagoreanTriplet
+ } from '../Probleme.js';
   
 import * as assert from 'assert';
 import { expect } from 'chai';
@@ -103,3 +105,12 @@ describe('Le plus grand produit d\'un nombre de digit donné' ,function(){
     expect(biggestProductOfDigit(13)).to.be.equal(23514624000)
   })
 })
+
+describe('Le triplet de Pythagore' ,function(){
+   it('le triplet de Pythagore pour une somme de 12', function(){
+     expect(specialPythagoreanTriplet(12)).to.be.equal(60)
+   })
+  it('le triplet de Pythagore pour une somme de 1000', function(){
+    expect(specialPythagoreanTriplet(1000)).to.be.equal(31875000)
+  })
+})  
